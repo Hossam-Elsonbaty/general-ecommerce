@@ -14,5 +14,6 @@ export default function HomeCategoriesSection() {
         </div>
       </div>
     </section>
+    // added code
   )
 }
