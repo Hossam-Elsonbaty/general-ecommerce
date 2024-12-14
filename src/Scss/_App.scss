@@ -421,170 +421,13 @@ body{
       padding: 0 9em;
       flex-wrap: wrap;
     }
-    .health-state-section-container{
-      display: flex;
-      width: 100%;
-      .title-and-cards-section{
-        overflow-x: hidden;
-        width: 80%;
-        h3{
-          padding-right: 5px;
-          color: #000000;
-          text-decoration: underline;
-          padding-top:15px ;
-        }
-        .cards-section{
-          display: flex;
-          padding-right: 10px;
-          padding-left: 10px;
-          padding-top:15px ;
-          padding-bottom:30px ;
-          .card{
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-top: 10px;
-            margin-right: 10px; 
-            border-radius: 0px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            .health-state-img-container{
-              width: 100%;
-              display: flex;
-              justify-content: center;
-              img{
-                border-radius: 50%;
-                height: 55px;
-                width: 55px;
-              }
-            }
-            h5{
-              text-align: center;
-              padding-top: 10px;
-              padding-bottom: 10px;
-              color: #000000ce;
-            }
-          }
-        }
-      }
-      .more-section{
-        width: 20%;
-        display: flex;
-        padding-right:10px ;
-        padding-left:10px ;
-        justify-content: center;
-        align-items: center;
-        color: rgb(0, 123, 255) ;
-        box-shadow: 4px 0 8px rgba(0, 123, 255, 0.5); /* Horizontal shadow only */
-      }
-    } 
-    .age-classify-section-container{
-      width: 100%;
-      h3{
-        padding-right: 5px;
-        color: #000000;
-        text-decoration: underline;
-        padding-top:15px ;
-      }
-      .cards-section{
-        width: 100%;
-        display: flex;
-        padding-right: 10px;
-        padding-left: 10px;
-        padding-top:15px ;
-        padding-bottom:30px ;
-        overflow-x: scroll;
-        scrollbar-width: thin; /* For Firefox */
-        scrollbar-color: #007bff #f0f0f0; /* Thumb color and track color */
-        .age-card{
-          padding-left: 10px;
-          padding-right: 10px;
-          margin-right: 10px; 
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          h5{
-            text-align: center;
-            padding-top: 10px;
-            padding-bottom: 10px;
-          }
-        }
-      }
-      .cards-section::-webkit-scrollbar {
-        height: 8px; /* Adjust scrollbar height */
-      }
-      
-      .cards-section::-webkit-scrollbar-thumb {
-        background-color: #007bff; /* Thumb color */
-        border-radius: 4px; /* Rounded edges */
-      }
-      
-      .cards-section::-webkit-scrollbar-track {
-        background-color: #f0f0f0; /* Track color */
-      }
-    } 
-    .from-a-to-z-container{
-      width: 100%;
-      h3{
-        padding-right: 5px;
-        color: #000000;
-        text-decoration: underline;
-        padding-top:15px ;
-      }
-      .cards-section{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        padding-top:15px ;
-        padding-bottom:30px ;
-        .card{
-          width: 20%;
-          padding-left: 10px;
-          padding-right: 10px;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          h4{
-            text-align: center;
-            padding-top: 10px;
-            padding-bottom: 10px;
-          }
-        }
-      }
-    } 
-    .home-brands-section-container{
-      width: 100%;
-      h3{
-        padding-right: 5px;
-        color: #000000;
-        // text-decoration: underline;
-        padding-top:0px ;
-      }
-      .cards-section{
-        width: 100%;
-        padding-top:15px ;
-        padding-bottom:30px ;
-        padding-left: 25%;
-        padding-right: 25%;
-        .card{
-          padding-left: 10px;
-          padding-right: 10px;
-          border-radius: 10px;
-          border-radius: 12px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          div{
-            display: flex;
-            justify-content: center;
-            img{
-              width: 120px;
-              height: 120px;
-            }
-          }
-        }
-      }
-    }
     .categories-section-container{
       width: 100%;
       .title-and-cards-section{
         width: 100%;
+        display: flex;
+        flex-direction: column;
         h3{
-          padding-right: 5px;
           color: #000000;
           // text-decoration: underline;
           padding-top:0px ;
@@ -592,29 +435,21 @@ body{
         .cards-section{
           width: 100%;
           display: flex;
-          gap: 2%;
+          justify-content: space-between;
+          gap: 10px;
           flex-wrap: wrap;
-          padding-right: 10px;
-          padding-left: 10px;
           padding-top:15px ;
-          padding-bottom:30px ;
           .card{
             width: 20%;
             background-color: #fff;
             padding: 10px 10px 0 10px;
-            margin-bottom: 15px;
-            margin-right: 10px; 
-            border-radius: 0px;
             border-radius: 12px;
-            // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             .health-state-img-container{
               width: 100%;
               display: flex;
               justify-content: center;
               img{
-                border-radius: 50%;
-                height: 55px;
-                width: 55px;
+                width: 40px;
               }
             }
             h5{
@@ -629,6 +464,159 @@ body{
       }
     } 
   }
+    // .health-state-section-container{
+    //   display: flex;
+    //   width: 100%;
+    //   .title-and-cards-section{
+    //     overflow-x: hidden;
+    //     width: 80%;
+    //     h3{
+    //       padding-right: 5px;
+    //       color: #000000;
+    //       text-decoration: underline;
+    //       padding-top:15px ;
+    //     }
+    //     .cards-section{
+    //       display: flex;
+    //       padding-top:15px ;
+    //       padding-bottom:30px ;
+    //       .card{
+    //         padding-left: 10px;
+    //         padding-right: 10px;
+    //         padding-top: 10px;
+    //         margin-right: 10px; 
+    //         border-radius: 0px;
+    //         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    //         .health-state-img-container{
+    //           width: 100%;
+    //           display: flex;
+    //           justify-content: center;
+    //           img{
+    //             width: 40px;
+    //             // border-radius: 50%;
+    //             // height: 55px;
+    //             // width: 55px;
+    //           }
+    //         }
+    //         h5{
+    //           text-align: center;
+    //           padding-top: 10px;
+    //           padding-bottom: 10px;
+    //           color: #000000ce;
+    //         }
+    //       }
+    //     }
+    //   }
+    //   .more-section{
+    //     width: 20%;
+    //     display: flex;
+    //     padding-right:10px ;
+    //     padding-left:10px ;
+    //     justify-content: center;
+    //     align-items: center;
+    //     color: rgb(0, 123, 255) ;
+    //     box-shadow: 4px 0 8px rgba(0, 123, 255, 0.5); /* Horizontal shadow only */
+    //   }
+    // } 
+    // .age-classify-section-container{
+    //   width: 100%;
+    //   h3{
+    //     padding-right: 5px;
+    //     color: #000000;
+    //     text-decoration: underline;
+    //     padding-top:15px ;
+    //   }
+    //   .cards-section{
+    //     width: 100%;
+    //     display: flex;
+    //     padding-top:15px ;
+    //     padding-bottom:30px ;
+    //     overflow-x: scroll;
+    //     scrollbar-width: thin; /* For Firefox */
+    //     scrollbar-color: #007bff #f0f0f0; /* Thumb color and track color */
+    //     .age-card{
+    //       padding-left: 10px;
+    //       padding-right: 10px;
+    //       margin-right: 10px; 
+    //       border-radius: 10px;
+    //       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    //       h5{
+    //         text-align: center;
+    //         padding-top: 10px;
+    //         padding-bottom: 10px;
+    //       }
+    //     }
+    //   }
+    //   .cards-section::-webkit-scrollbar {
+    //     height: 8px; /* Adjust scrollbar height */
+    //   }
+      
+    //   .cards-section::-webkit-scrollbar-thumb {
+    //     background-color: #007bff; /* Thumb color */
+    //     border-radius: 4px; /* Rounded edges */
+    //   }
+      
+    //   .cards-section::-webkit-scrollbar-track {
+    //     background-color: #f0f0f0; /* Track color */
+    //   }
+    // } 
+    // .from-a-to-z-container{
+    //   width: 100%;
+    //   h3{
+    //     padding-right: 5px;
+    //     color: #000000;
+    //     text-decoration: underline;
+    //     padding-top:15px ;
+    //   }
+    //   .cards-section{
+    //     width: 100%;
+    //     display: flex;
+    //     justify-content: space-evenly;
+    //     padding-top:15px ;
+    //     padding-bottom:30px ;
+    //     .card{
+    //       width: 20%;
+    //       padding-left: 10px;
+    //       padding-right: 10px;
+    //       border-radius: 10px;
+    //       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    //       h4{
+    //         text-align: center;
+    //         padding-top: 10px;
+    //         padding-bottom: 10px;
+    //       }
+    //     }
+    //   }
+    // } 
+    // .home-brands-section-container{
+    //   width: 100%;
+    //   h3{
+    //     padding-right: 5px;
+    //     color: #000000;
+    //     // text-decoration: underline;
+    //     padding-top:0px ;
+    //   }
+    //   .cards-section{
+    //     width: 100%;
+    //     padding-top:15px ;
+    //     padding-bottom:30px ;
+    //     .card{
+    //       padding-left: 10px;
+    //       padding-right: 10px;
+    //       border-radius: 10px;
+    //       border-radius: 12px;
+    //       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    //       div{
+    //         display: flex;
+    //         justify-content: center;
+    //         img{
+    //           width: 120px;
+    //           height: 120px;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   // end sections 
   // start section page 
   .pagination{

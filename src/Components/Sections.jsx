@@ -9,10 +9,10 @@ export default function Sections() {
   return (
     <section className='sections-container'>
       <HomeCategoriesSection></HomeCategoriesSection>
-      <HomeHealthStateSection></HomeHealthStateSection>
+      {/* <HomeHealthStateSection></HomeHealthStateSection>
       <HomeAgeClassifySection></HomeAgeClassifySection>
       <FromAtoZSection></FromAtoZSection>
-      <HomeBrandsSection></HomeBrandsSection>
+      <HomeBrandsSection></HomeBrandsSection> */}
     </section>
   )
 }

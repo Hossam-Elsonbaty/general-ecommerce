@@ -6,54 +6,57 @@ import section5 from '../Images/eye-makeup-678x446.webp';
 import section6 from '../Images/Contact-Lenses-1.webp';
 import section7 from '../Images/first-aid-1.webp';
 import section8 from '../Images/skincare-hero.webp';
+import svg1 from '../Images/svg/hair-treatment_17538358.png'
+import svg2 from '../Images/svg/medical-history_881760.png'
+import svg3 from '../Images/svg/perfume_1339791.png'
 
 const sectionData = [
   { 
     id: 1,
     name: "العناية الطبية",
-    image:section1,
+    image:svg2,
     link:"section/2"
   },
   { 
     id: 2, 
     name: "العطور", 
-    image:section2,
+    image:svg3,
     link:"section/2" 
   },
   { 
     id: 3, 
     name: "العناية بالشعر", 
-    image:section3,
+    image:svg1,
     link:"section/2" 
   },
   { 
     id: 4, 
     name:"البرد و الانفلوانزا", 
-    image:section4,
+    image:svg2,
     link:"section/2" 
   },
   { 
     id: 5, 
     name: "المكياج", 
-    image:section5,
+    image:svg3,
     link:"section/2" 
   },
   { 
     id: 6, 
     name: "قسم العدسات", 
-    image:section6,
+    image:svg1,
     link:"section/2" 
   },
   { 
     id: 7, 
     name: "الاسعافات الاولية", 
-    image:section7,
+    image:svg2,
     link:"section/2" 
   },
   { 
     id: 8, 
     name: "العناية الشخصية", 
-    image:section8,
+    image:svg3,
     link:"section/2" 
   },
 ];

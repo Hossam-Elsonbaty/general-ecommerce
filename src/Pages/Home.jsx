@@ -9,7 +9,7 @@ export default function Home() {
     <main className='main'>
       <Swiper></Swiper>
       <Sections></Sections>
-      <TopSale></TopSale>
+      {/* <TopSale></TopSale> */}
       <Footer></Footer>
     </main>
   )
