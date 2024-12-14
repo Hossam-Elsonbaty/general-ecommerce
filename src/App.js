@@ -1,4 +1,4 @@
-// import React from 'react';// removeo
+// import React from 'react';// removeo1
 // import {BrowserRouter as Router , Routes, Route, useLocation } from 'react-router-dom';
 // import Home from './Pages/Home';
 // import Navbar from './Components/Navbar';
