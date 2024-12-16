@@ -1836,6 +1836,10 @@ body {
   max-width: 90%;
   flex-wrap: wrap;
 }
+.product-details-container main .product-choices-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .product-details-container main .product-choices-container .product-sizes-container {
   display: flex;
   flex-direction: column;
@@ -1890,7 +1894,7 @@ body {
   width: 100%;
   background-color: #f7f7f7;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   padding-right: 10px;
   padding-left: 10px;
 }

@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import extrasData from "../Data/dataExtras";
+import React from "react";
 
-const ExtrasSelector = () => {
-  const [selectedExtras, setSelectedExtras] = useState([]); // State for selected extras
+const ExtrasSelector = ({extrasData,selectedExtras,setSelectedExtras}) => {
 
   const handleChoosedExtra = (event) => {
     const extraId = Number(event.target.value); // Get the ID of the clicked extra

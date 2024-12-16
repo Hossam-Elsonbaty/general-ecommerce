@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaShoppingCart } from 'react-icons/fa'; 
 
-const AddToCartContainer = () => {
+const AddToCartContainer = ({ totalPrice, handleAddToCart }) => {
 
   return (
     <>
       <span className="total-span">
-        999 EP : الاجمالي
+      {totalPrice} EP : الاجمالي
       </span>
-      <div className="addtocart-button">
+      <div className="addtocart-button" onClick={handleAddToCart}>
         <FaShoppingCart /><span>اضف الى السلة</span>
       </div>
     </>

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
-const SizeSelector = ({sizesAndPrices}) => {
-  const [selectedSizeAndPrice, setSelectedSizeAndPrice] = useState(Number(sizesAndPrices[0].id));
+const SizeSelector = ({sizesAndPrices,selectedSize,setSelectedSize}) => {
 
   const handleSizeChange = (event) => {
-    setSelectedSizeAndPrice(Number(event.target.value));
+    setSelectedSize(Number(event.target.value));
   };
 
   return (
@@ -14,12 +13,12 @@ const SizeSelector = ({sizesAndPrices}) => {
       </div>
       <div className="sizes-prices-list">
         {sizesAndPrices.map((sizeAndPrice) => (
-          <label key={sizeAndPrice.id} className={`${Number(selectedSizeAndPrice) === Number(sizeAndPrice.id)?"checked-radio":""}`}>
+          <label key={sizeAndPrice.id} className={`${Number(selectedSize) === Number(sizeAndPrice.id)?"checked-radio":""}`}>
             <input
               type="radio"
               name="sizeAndPrice"
               value={sizeAndPrice.id}
-              checked={Number(selectedSizeAndPrice) === Number(sizeAndPrice.id)}
+              checked={Number(selectedSize) === Number(sizeAndPrice.id)}
               onChange={handleSizeChange}
             />
             {sizeAndPrice.size}{` (${sizeAndPrice.price} EP)`}
