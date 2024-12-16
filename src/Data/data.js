@@ -13,7 +13,12 @@ const productData = [
     price: 100,
     image: product1,
     availability: "متبقي 2 فقط.",
-    brand:"غوتشي"
+    brand:"غوتشي",
+    sizesAndPrices:[
+      {id:24,size:"150 gm",price:"100"},
+      {id:23,size:"400X500",price:"250"},
+      {id:22,size:"1 kg",price:"70"},
+    ]
   },
   { 
     id: 2, 
@@ -21,7 +26,12 @@ const productData = [
     price: 4000, 
     image: product2, 
     availability: "متبقي 2 فقط.",
-    brand: "باكو"
+    brand: "باكو",
+    sizesAndPrices:[
+      {id:21,size:"150 gm",price:"100"},
+      {id:20,size:"400X500",price:"250"},
+      {id:19,size:"1 kg",price:"70"},
+    ]
   },
   { 
     id: 3, 
@@ -29,7 +39,12 @@ const productData = [
     price: 800, 
     image: product3, 
     availability: "متبقي 2 فقط." ,
-    brand:"امبوريو"
+    brand:"امبوريو",
+    sizesAndPrices:[
+      {id:18,size:"150 gm",price:"100"},
+      {id:17,size:"400X500",price:"250"},
+      {id:16,size:"1 kg",price:"70"},
+    ]
   },
   { 
     id: 4, 
@@ -37,7 +52,12 @@ const productData = [
     price:300, 
     image: product4, 
     availability: "متبقي 2 فقط." ,
-    brand:"لاكوست بلانك"
+    brand:"لاكوست بلانك",
+    sizesAndPrices:[
+      {id:15,size:"150 gm",price:"100"},
+      {id:14,size:"400X500",price:"250"},
+      {id:13,size:"1 kg",price:"70"},
+    ]
   },
   { 
     id: 5, 
@@ -45,7 +65,12 @@ const productData = [
     price: 10000, 
     image: product5, 
     availability: "متبقي 2 فقط." ,
-    brand:"جيفنشي"
+    brand:"جيفنشي",
+    sizesAndPrices:[
+      {id:12,size:"150 gm",price:"100"},
+      {id:10,size:"400X500",price:"250"},
+      {id:11,size:"1 kg",price:"80"},
+    ]
   },
   { 
     id: 6, 
@@ -53,7 +78,12 @@ const productData = [
     price: 2500, 
     image: product6, 
     availability: "متبقي 2 فقط." ,
-    brand:"شوبارد"
+    brand:"شوبارد",
+    sizesAndPrices:[
+      {id:9,size:"150 gm",price:"100"},
+      {id:8,size:"400X500",price:"250"},
+      {id:7,size:"1 kg",price:"70"},
+    ]
   },
   { 
     id: 7, 
@@ -61,7 +91,12 @@ const productData = [
     price: 8, 
     image: product7, 
     availability: "متبقي 2 فقط." ,
-    brand:"جان بول"
+    brand:"جان بول",
+    sizesAndPrices:[
+      {id:6,size:"150 gm",price:"100"},
+      {id:5,size:"400X500",price:"250"},
+      {id:4,size:"1 kg",price:"70"},
+    ]
   },
   { 
     id: 8, 
@@ -69,7 +104,12 @@ const productData = [
     price: 5000, 
     image: product8, 
     availability: "متبقي 2 فقط." ,
-    brand:"جان بول"
+    brand:"جان بول",
+    sizesAndPrices:[
+      {id:3,size:"150 gm",price:"100"},
+      {id:2,size:"400X500",price:"250"},
+      {id:1,size:"1 kg",price:"70"},
+    ]
   },
   // Add more products as needed
 ];
