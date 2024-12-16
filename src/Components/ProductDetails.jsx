@@ -1,15 +1,17 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useContext} from 'react';
 import { FaArrowRight } from 'react-icons/fa'; 
 import SizeSelector from './SizeSelector';
 import AddToCartContainer from './AddCartContainer';
 import ExtrasSelector from './ExtrasSelector';
 import extrasData from "../Data/dataExtras";
+import CartContext from '../Context/CartContext';
 
 const OrderDetails = ({ setShowProductDetails,product }) => {
   const [animate, setAnimate] = useState(false);
   const [selectedSize, setSelectedSize] = useState(Number(product.sizesAndPrices[0].id));
   const [selectedExtras, setSelectedExtras] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     // Trigger animation on mount
@@ -44,13 +46,13 @@ const OrderDetails = ({ setShowProductDetails,product }) => {
     const productToCart = {
       id: product.id,
       name: product.name,
+      image:product.image,
       size: sizeObject, // Assign the full size object
       extras: extrasObjects, // Assign the list of full extras objects
       price: totalPrice, // Use the computed total price
     };
 
-    console.log(productToCart); // Verify the structure
-    // setCart((prevCart) => [...prevCart, productToCart]); // Uncomment when integrating with cart
+    addToCart(productToCart);
   }
 
   return (
