@@ -1,14 +1,19 @@
 import React from 'react';
+import Swiper from '../Components/Offers';
 import HomeHealthStateSection from './HomeHealthStateSection';
 import HomeAgeClassifySection from './HomeAgeCassifySection';
 import FromAtoZSection from './FromAtoZSection';
 import HomeCategoriesSection from './HomeCategoriesSection';
+import {HomeCompoSection} from './HomeCompoSection';
+import {BestSeller} from './BestSeller';
 import HomeBrandsSection from './HomeBrandsSection';
 
 export default function Sections() {
   return (
     <section className='sections-container'>
       <HomeCategoriesSection></HomeCategoriesSection>
+      <HomeCompoSection/>
+      <BestSeller/>
       {/* <HomeHealthStateSection></HomeHealthStateSection>
       <HomeAgeClassifySection></HomeAgeClassifySection>
       <FromAtoZSection></FromAtoZSection>

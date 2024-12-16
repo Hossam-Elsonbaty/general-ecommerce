@@ -38,7 +38,7 @@ export default function Section( ) {
             <VscSettings />
           </div>
         </div>
-        <ProductList  products={currentProducts}></ProductList>
+        <ProductList products={currentProducts}></ProductList>
         <div className='pagination'>
           <Pagination 
             current={currentPage}
