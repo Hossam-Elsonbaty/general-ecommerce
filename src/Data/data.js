@@ -15,9 +15,9 @@ const productData = [
     availability: "متبقي 2 فقط.",
     brand:"غوتشي",
     sizesAndPrices:[
-      {id:24,size:"150 gm",price:"100"},
-      {id:23,size:"400X500",price:"250"},
-      {id:22,size:"1 kg",price:"70"},
+      {id:24,size:"150 gm",price:100},
+      {id:23,size:"400X500",price:250},
+      {id:22,size:"1 kg",price:70},
     ]
   },
   { 
@@ -28,9 +28,9 @@ const productData = [
     availability: "متبقي 2 فقط.",
     brand: "باكو",
     sizesAndPrices:[
-      {id:21,size:"150 gm",price:"100"},
-      {id:20,size:"400X500",price:"250"},
-      {id:19,size:"1 kg",price:"70"},
+      {id:21,size:"150 gm",price:100},
+      {id:20,size:"400X500",price:250},
+      {id:19,size:"1 kg",price:70},
     ]
   },
   { 
@@ -41,9 +41,9 @@ const productData = [
     availability: "متبقي 2 فقط." ,
     brand:"امبوريو",
     sizesAndPrices:[
-      {id:18,size:"150 gm",price:"100"},
-      {id:17,size:"400X500",price:"250"},
-      {id:16,size:"1 kg",price:"70"},
+      {id:18,size:"150 gm",price:100},
+      {id:17,size:"400X500",price:250},
+      {id:16,size:"1 kg",price:70},
     ]
   },
   { 
@@ -54,9 +54,9 @@ const productData = [
     availability: "متبقي 2 فقط." ,
     brand:"لاكوست بلانك",
     sizesAndPrices:[
-      {id:15,size:"150 gm",price:"100"},
-      {id:14,size:"400X500",price:"250"},
-      {id:13,size:"1 kg",price:"70"},
+      {id:15,size:"150 gm",price:100},
+      {id:14,size:"400X500",price:250},
+      {id:13,size:"1 kg",price:70},
     ]
   },
   { 
@@ -67,9 +67,9 @@ const productData = [
     availability: "متبقي 2 فقط." ,
     brand:"جيفنشي",
     sizesAndPrices:[
-      {id:12,size:"150 gm",price:"100"},
-      {id:10,size:"400X500",price:"250"},
-      {id:11,size:"1 kg",price:"80"},
+      {id:12,size:"150 gm",price:100},
+      {id:10,size:"400X500",price:250},
+      {id:11,size:"1 kg",price:80},
     ]
   },
   { 
@@ -80,9 +80,9 @@ const productData = [
     availability: "متبقي 2 فقط." ,
     brand:"شوبارد",
     sizesAndPrices:[
-      {id:9,size:"150 gm",price:"100"},
-      {id:8,size:"400X500",price:"250"},
-      {id:7,size:"1 kg",price:"70"},
+      {id:9,size:"150 gm",price:100},
+      {id:8,size:"400X500",price:250},
+      {id:7,size:"1 kg",price:70},
     ]
   },
   { 
@@ -93,9 +93,9 @@ const productData = [
     availability: "متبقي 2 فقط." ,
     brand:"جان بول",
     sizesAndPrices:[
-      {id:6,size:"150 gm",price:"100"},
-      {id:5,size:"400X500",price:"250"},
-      {id:4,size:"1 kg",price:"70"},
+      {id:6,size:"150 gm",price:100},
+      {id:5,size:"400X500",price:250},
+      {id:4,size:"1 kg",price:70},
     ]
   },
   { 
@@ -106,9 +106,9 @@ const productData = [
     availability: "متبقي 2 فقط." ,
     brand:"جان بول",
     sizesAndPrices:[
-      {id:3,size:"150 gm",price:"100"},
-      {id:2,size:"400X500",price:"250"},
-      {id:1,size:"1 kg",price:"70"},
+      {id:3,size:"150 gm",price:100},
+      {id:2,size:"400X500",price:250},
+      {id:1,size:"1 kg",price:70},
     ]
   },
   // Add more products as needed

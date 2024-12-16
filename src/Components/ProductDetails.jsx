@@ -23,7 +23,6 @@ const OrderDetails = ({ setShowProductDetails,product }) => {
       const extra = extrasData.find(extra => extra.id === extraId);
       return total + (extra ? extra.price : 0);
     }, 0);
-    
     setTotalPrice(sizePrice + extrasPrice);
   }, [selectedSize, selectedExtras]);
 
@@ -32,6 +31,27 @@ const OrderDetails = ({ setShowProductDetails,product }) => {
     setAnimate(false);
     setShowProductDetails(false)
   };
+
+  const handleAddToCart=() => {
+    const sizeObject = product.sizesAndPrices.find(
+      (size) => size.id === selectedSize
+    ); // Find the selected size object
+    console.log("seleextras",selectedExtras)
+    const extrasObjects = selectedExtras.map((extraId) => 
+      extrasData.find((extra) => extra.id === extraId)
+    ); // Map selectedExtras IDs to their respective objects
+
+    const productToCart = {
+      id: product.id,
+      name: product.name,
+      size: sizeObject, // Assign the full size object
+      extras: extrasObjects, // Assign the list of full extras objects
+      price: totalPrice, // Use the computed total price
+    };
+
+    console.log(productToCart); // Verify the structure
+    // setCart((prevCart) => [...prevCart, productToCart]); // Uncomment when integrating with cart
+  }
 
   return (
 
@@ -68,17 +88,7 @@ const OrderDetails = ({ setShowProductDetails,product }) => {
           <div className="total-addtocart-container">
             <AddToCartContainer
               totalPrice={totalPrice}
-              handleAddToCart={() => {
-                const productToCart = {
-                  id: product.id,
-                  name: product.name,
-                  size: selectedSize,
-                  extras: selectedExtras,
-                  price:totalPrice,
-                };
-                console.log(productToCart);
-                //setCart((prevCart) => [...prevCart, productToCart]); // replace this with actual code that pushs code to cart 
-              }}
+              handleAddToCart={handleAddToCart}
             />
           </div>
         </div>
