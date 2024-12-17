@@ -1972,6 +1972,22 @@ body {
   transform: translateY(0);
 }
 
+.addresses-title-container {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.addresses-title-container .add-button {
+  outline: none;
+  background-color: var(--accent-100);
+  border: none;
+  padding: 4px 6px;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
 .addresses-data .address-info {
   padding-bottom: 20px;
   margin-bottom: 10px;
@@ -1994,7 +2010,7 @@ body {
 }
 .addresses-data .address-info .address-title-container .edit-button {
   outline: none;
-  background-color: var(--accent-100);
+  background-color: green;
   border: none;
   padding: 4px 6px;
   color: #fff;

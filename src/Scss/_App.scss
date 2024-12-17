@@ -2133,6 +2133,23 @@ body{
   transform: translateY(0);
 }
 // addresses page
+.addresses-title-container{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  .addresses-top-title{
+  }
+  .add-button{
+    outline: none;
+    background-color: var(--accent-100);
+    border: none;
+    padding: 4px 6px;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+}
 .addresses-data{
   .address-info{
     padding-bottom: 20px;
@@ -2156,7 +2173,7 @@ body{
       }
       .edit-button{
         outline: none;
-        background-color: var(--accent-100);
+        background-color: green;
         border: none;
         padding: 4px 6px;
         color: #fff;
