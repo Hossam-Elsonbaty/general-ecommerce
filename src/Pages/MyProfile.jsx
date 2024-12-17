@@ -23,7 +23,7 @@ const MyProfile = () => {
               <h4>طلباتي</h4>
               <MdOutlineKeyboardArrowLeft />
             </div>
-            <div className="col">
+            <div className="col" onClick={()=>{navigate("/my-addresses")}}>
               <h4>عناويني</h4>
               <MdOutlineKeyboardArrowLeft />
             </div>

@@ -64,6 +64,7 @@ import { FavoritesProvider } from './Context/FavoritesContext.jsx';
 import { FiltersProvider } from './Context/IsFiltersOpened.js';
 import { ProductsProvider } from './Context/ProductsContext.js';
 import SearchResults from './Pages/SearchResults.jsx';
+import UserAddresses from './Pages/UserAddresses.jsx';
 const App = () => {
   const location = useLocation();
   return (
@@ -88,6 +89,7 @@ const App = () => {
         </Route>
         <Route path='section/:sectionId' exact element={<SubSection />} />
         <Route path='section' exact element={<Section />} />
+        <Route path='my-addresses' exact element={<UserAddresses />} />
         <Route path='my-favorite' exact element={<Favorite />} />
         <Route path='search-results' exact element={<SearchResults />} />
         <Route path='orders' exact element={<Orders />} />

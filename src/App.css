@@ -1970,4 +1970,41 @@ body {
 .slide-in {
   opacity: 1;
   transform: translateY(0);
+}
+
+.addresses-data .address-info {
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  border-bottom: var(--accent-100) 1px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.addresses-data .address-info .col .select {
+  width: 100% !important;
+}
+.addresses-data .address-info .address-title-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.addresses-data .address-info .address-title-container .top-title {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.6196078431);
+}
+.addresses-data .address-info .address-title-container .edit-button {
+  outline: none;
+  background-color: var(--accent-100);
+  border: none;
+  padding: 4px 6px;
+  color: #fff;
+  border-radius: 5px;
+}
+.addresses-data .address-info .address-title-container .delete-button {
+  outline: none;
+  background-color: red;
+  border: none;
+  padding: 4px 6px;
+  color: #fff;
+  border-radius: 5px;
 }/*# sourceMappingURL=App.css.map */

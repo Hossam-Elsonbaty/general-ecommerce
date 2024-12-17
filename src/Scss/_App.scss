@@ -2132,3 +2132,44 @@ body{
   opacity: 1;
   transform: translateY(0);
 }
+// addresses page
+.addresses-data{
+  .address-info{
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border-bottom:var(--accent-100) 1px solid ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .col{
+      .select{
+        width: 100% !important;
+      }
+    }
+    .address-title-container{
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      .top-title{
+        font-size: 22px;
+        color: #0000009e;
+      }
+      .edit-button{
+        outline: none;
+        background-color: var(--accent-100);
+        border: none;
+        padding: 4px 6px;
+        color: #fff;
+        border-radius: 5px;
+      }
+      .delete-button{
+        outline: none;
+        background-color: red;
+        border: none;
+        padding: 4px 6px;
+        color: #fff;
+        border-radius: 5px;
+      }
+    }
+  }  
+}
