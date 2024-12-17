@@ -55,7 +55,7 @@ body{
   justify-content: center;
   align-items: center;
   z-index: 7;
-  background-color: #00c063;
+  background-color: #007bff;
   border-radius: 25px;
   @include breakpoint(desktop){
     border-radius: 40px;
@@ -417,7 +417,8 @@ body{
     gap: 15px;
     h3{
       color: #007bff;
-      font-size: 1.25rem;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
     }
     @include breakpoint(desktop){
       flex-direction: row;
@@ -428,7 +429,6 @@ body{
     section.best-seller {
       display: flex;
       flex-direction: column;
-      gap: 10px;
       .cell-container{
         display: flex;
         justify-content: space-between;
@@ -517,7 +517,6 @@ body{
     section.compo-section{
       display: flex;
       flex-direction: column;
-      gap: 10px;
       width: 100%;
       .image-cont{
         overflow-x: auto;
@@ -544,7 +543,6 @@ body{
           justify-content: space-between;
           gap: 10px;
           flex-wrap: wrap;
-          padding-top:15px ;
           .card{
             width: 20%;
             background-color: #fff;
@@ -571,6 +569,33 @@ body{
         }
       }
     } 
+    section.new-arrival {
+      width: 100%;
+      .swiper-slide{
+        .img-cont{
+          width: 100%;
+          position: relative;
+          &::before{
+            content: "وصل حديثا";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: red;
+            color: #fff;
+            width:fit-content;
+            height: fit-content;
+            transform: rotate();
+            text-align: center;
+            padding: 8px;
+            border-top-right-radius: 12px;
+          }
+          img{
+            width: 100%;
+            border-radius: 12px;
+          }
+        }
+      }
+    }
   }
     // .health-state-section-container{
     //   display: flex;

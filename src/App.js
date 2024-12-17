@@ -57,7 +57,7 @@ import PaymentMethods from './Components/PaymentMethods.jsx';
 import MyProfile from './Pages/MyProfile.jsx';
 import SignUp from './Pages/SignUp';
 import Login from './Pages/Login.jsx';
-import { FaWhatsapp } from "react-icons/fa";
+import { PiPhoneCall } from "react-icons/pi";
 import { DesktopProvider } from './Context/IsDesktop.jsx';
 import { CartProvider } from './Context/CartContext.jsx';
 import { FavoritesProvider } from './Context/FavoritesContext.jsx';
@@ -71,7 +71,7 @@ const App = () => {
     <>
       {location.pathname !== '/sign-up' && location.pathname !== '/login' &&
         <Link className='col-whats' to = "https://wa.me/201118066382">
-          <FaWhatsapp />
+          <PiPhoneCall />
         </Link>
       }
       <a hidden href="https://storyset.com/user">User illustrations by Storyset</a>

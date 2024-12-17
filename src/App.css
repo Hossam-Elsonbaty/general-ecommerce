@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap");
@@ -54,7 +55,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 7;
-  background-color: #00c063;
+  background-color: #007bff;
   border-radius: 25px;
 }
 @media (min-width: 768px) {
@@ -423,7 +424,8 @@ body {
 }
 .main .sections-container h3 {
   color: #007bff;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) {
   .main .sections-container {
@@ -436,7 +438,6 @@ body {
 .main .sections-container section.best-seller {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 .main .sections-container section.best-seller .cell-container {
   display: flex;
@@ -525,7 +526,6 @@ body {
 .main .sections-container section.compo-section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   width: 100%;
 }
 .main .sections-container section.compo-section .image-cont {
@@ -554,7 +554,6 @@ body {
   justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
-  padding-top: 15px;
 }
 .main .sections-container .categories-section-container .title-and-cards-section .cards-section .card {
   width: 20%;
@@ -578,6 +577,33 @@ body {
   font-weight: 900;
   padding-bottom: 10px;
   color: rgba(0, 0, 0, 0.47);
+}
+.main .sections-container section.new-arrival {
+  width: 100%;
+}
+.main .sections-container section.new-arrival .swiper-slide .img-cont {
+  width: 100%;
+  position: relative;
+}
+.main .sections-container section.new-arrival .swiper-slide .img-cont::before {
+  content: "وصل حديثا";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  transform: rotate();
+  text-align: center;
+  padding: 8px;
+  border-top-right-radius: 12px;
+}
+.main .sections-container section.new-arrival .swiper-slide .img-cont img {
+  width: 100%;
+  border-radius: 12px;
 }
 .main .pagination {
   direction: ltr;

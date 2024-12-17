@@ -6,6 +6,7 @@ import FromAtoZSection from './FromAtoZSection';
 import HomeCategoriesSection from './HomeCategoriesSection';
 import {HomeCompoSection} from './HomeCompoSection';
 import {BestSeller} from './BestSeller';
+import {NewArrival} from './NewArrival';
 import HomeBrandsSection from './HomeBrandsSection';
 
 export default function Sections() {
@@ -13,6 +14,7 @@ export default function Sections() {
     <section className='sections-container'>
       <HomeCategoriesSection></HomeCategoriesSection>
       <HomeCompoSection/>
+      <NewArrival/>
       <BestSeller/>
       {/* <HomeHealthStateSection></HomeHealthStateSection>
       <HomeAgeClassifySection></HomeAgeClassifySection>
