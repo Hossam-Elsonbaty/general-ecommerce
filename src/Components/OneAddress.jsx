@@ -1,27 +1,37 @@
-import React from 'react';
-import {  Input } from 'antd';
-import { FaTrash,FaPen } from "react-icons/fa";
+import React, { useState } from 'react';
+import { Input, Modal } from 'antd';
+import { FaTrash, FaPen } from "react-icons/fa";
+import EditAddress from './EditAddress';
 
-const OneAddress = ({address,index}) => {
+const OneAddress = ({ address, index }) => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const openModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const closeModal = () => {
+    setIsModalVisible(false);
+  };
 
   return (
     <div className='address-info'>
       <div className="address-title-container">
         <h2 className='top-title'> عنوان {index} </h2>
-        <button className='edit-button'>
-        تعديل<FaPen/>
+        <button className='edit-button' onClick={openModal}>
+          تعديل <FaPen />
         </button>
         <button className='delete-button'>
-        مسح<FaTrash/>
+          مسح <FaTrash />
         </button>
       </div>
+
       {/* Country */}
       <div className='col'>
         <Input
           placeholder="الدولة"
           value={address.country}
           disabled
-          
         />
       </div>
 
@@ -60,6 +70,15 @@ const OneAddress = ({address,index}) => {
           disabled
         />
       </div>
+
+      {/* Edit Modal */}
+      <Modal
+        open={isModalVisible}
+        onCancel={closeModal}
+        footer={null} // Remove default footer buttons
+      >
+        <EditAddress address={address} index={index} />
+      </Modal>
     </div>
   );
 };
