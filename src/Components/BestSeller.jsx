@@ -28,12 +28,12 @@ export const BestSeller = () => {
       <h3>الأكثر مبيعا</h3>
       <div className="cell-container">
         <div className="cell">
-          <img src={image1} alt="steakhouse" />
-          <span className='v-line'></span>
+          <img src={image2} alt="image" />
           <div className="cell-desc">
             <h4>تشكن فاير</h4>
+            <span>الدجاج المقلي المغطي بصوص الفاير الحار و صوص الجبنه و فلفل الهاليبينو مع الخص و الطماطم و الخيار المخلل</span>
             <div className="price">
-              <h4>120 EGP</h4>
+              <span>130 EGP</span>
               <button className={`order-btn ${isActive ? 'active' : ''}`} >
               {!isActive ?
                 <CiShoppingCart onClick={() => handleAddToCart(product)}/>
@@ -53,38 +53,12 @@ export const BestSeller = () => {
           </div>
         </div>
         <div className="cell">
-          <img src={image2} alt="steakhouse" />
-          <span className='v-line'></span>
+          <img src={image1} alt="image" />
           <div className="cell-desc">
             <h4>تشكن فاير</h4>
+            <span>الدجاج المقلي المغطي بصوص الفاير الحار و صوص الجبنه و فلفل الهاليبينو مع الخص و الطماطم و الخيار المخلل</span>
             <div className="price">
-              <h4>109 EGP</h4>
-              <button className={`order-btn ${isActive ? 'active' : ''}`} >
-              {!isActive ?
-                <CiShoppingCart onClick={() => handleAddToCart(product)}/>
-                :
-                <div className='active-div'>
-                  <button className='plus' onClick={handleIncreaseQuantity}><CiCirclePlus /></button>
-                  <h1 className='qnt'>{cartItem?.quantity}</h1>
-                  <button className='trash' >
-                    {cartItem?.quantity > 1
-                      ?<CiCircleMinus onClick={handleDecreaseQuantity}/> 
-                      :<LuTrash2 onClick={handleRemoveFromCart}/> }
-                  </button>
-                </div>
-              }
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="cell">
-          <img src={image2} alt="steakhouse" />
-          <span className='v-line'></span>
-          <div className="cell-desc">
-            <h4>تشكن فاير</h4>
-            <div className="price">
-              <h4>109 EGP</h4>
-              {/* <button>add to cart</button> */}
+              <span>130 EGP</span>
               <button className={`order-btn ${isActive ? 'active' : ''}`} >
               {!isActive ?
                 <CiShoppingCart onClick={() => handleAddToCart(product)}/>
@@ -105,5 +79,86 @@ export const BestSeller = () => {
         </div>
       </div>
     </section>
+    // <section className='best-seller'>
+    //   <h3>الأكثر مبيعا</h3>
+    //   <div className="cell-container">
+    //     <div className="cell">
+    //       <img src={image1} alt="steakhouse" />
+    //       <span className='v-line'></span>
+    //       <div className="cell-desc">
+    //         <h4>تشكن فاير</h4>
+    //         <div className="price">
+    //           <h4>120 EGP</h4>
+    //           <button className={`order-btn ${isActive ? 'active' : ''}`} >
+    //           {!isActive ?
+    //             <CiShoppingCart onClick={() => handleAddToCart(product)}/>
+    //             :
+    //             <div className='active-div'>
+    //               <button className='plus' onClick={handleIncreaseQuantity}><CiCirclePlus /></button>
+    //               <h1 className='qnt'>{cartItem?.quantity}</h1>
+    //               <button className='trash' >
+    //                 {cartItem?.quantity > 1
+    //                   ?<CiCircleMinus onClick={handleDecreaseQuantity}/> 
+    //                   :<LuTrash2 onClick={handleRemoveFromCart}/> }
+    //               </button>
+    //             </div>
+    //           }
+    //           </button>
+    //         </div>
+    //       </div>
+    //     </div>
+    //     <div className="cell">
+    //       <img src={image2} alt="steakhouse" />
+    //       <span className='v-line'></span>
+    //       <div className="cell-desc">
+    //         <h4>تشكن فاير</h4>
+    //         <div className="price">
+    //           <h4>109 EGP</h4>
+    //           <button className={`order-btn ${isActive ? 'active' : ''}`} >
+    //           {!isActive ?
+    //             <CiShoppingCart onClick={() => handleAddToCart(product)}/>
+    //             :
+    //             <div className='active-div'>
+    //               <button className='plus' onClick={handleIncreaseQuantity}><CiCirclePlus /></button>
+    //               <h1 className='qnt'>{cartItem?.quantity}</h1>
+    //               <button className='trash' >
+    //                 {cartItem?.quantity > 1
+    //                   ?<CiCircleMinus onClick={handleDecreaseQuantity}/> 
+    //                   :<LuTrash2 onClick={handleRemoveFromCart}/> }
+    //               </button>
+    //             </div>
+    //           }
+    //           </button>
+    //         </div>
+    //       </div>
+    //     </div>
+    //     <div className="cell">
+    //       <img src={image2} alt="steakhouse" />
+    //       <span className='v-line'></span>
+    //       <div className="cell-desc">
+    //         <h4>تشكن فاير</h4>
+    //         <div className="price">
+    //           <h4>109 EGP</h4>
+    //           {/* <button>add to cart</button> */}
+    //           <button className={`order-btn ${isActive ? 'active' : ''}`} >
+    //           {!isActive ?
+    //             <CiShoppingCart onClick={() => handleAddToCart(product)}/>
+    //             :
+    //             <div className='active-div'>
+    //               <button className='plus' onClick={handleIncreaseQuantity}><CiCirclePlus /></button>
+    //               <h1 className='qnt'>{cartItem?.quantity}</h1>
+    //               <button className='trash' >
+    //                 {cartItem?.quantity > 1
+    //                   ?<CiCircleMinus onClick={handleDecreaseQuantity}/> 
+    //                   :<LuTrash2 onClick={handleRemoveFromCart}/> }
+    //               </button>
+    //             </div>
+    //           }
+    //           </button>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </section>
   )
 }
