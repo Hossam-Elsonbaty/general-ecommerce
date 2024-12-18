@@ -1015,6 +1015,7 @@ body {
   border-top-left-radius: 25px;
   position: absolute;
   top: 215px;
+  left: 0;
 }
 .main .cart-content .fixed-bottom {
   background-color: #f7f7f7;
