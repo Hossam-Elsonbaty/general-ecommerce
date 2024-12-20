@@ -67,10 +67,11 @@ import SearchResults from './Pages/SearchResults.jsx';
 import UserAddresses from './Pages/UserAddresses.jsx';
 const App = () => {
   const location = useLocation();
+  // https://wa.me/201118066382
   return (
     <>
       {location.pathname !== '/sign-up' && location.pathname !== '/login' &&
-        <Link className='col-whats' to = "https://wa.me/201118066382">
+        <Link className='col-whats' to = "tel:0201118066382">
           <PiPhoneCall />
         </Link>
       }
