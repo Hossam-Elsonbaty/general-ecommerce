@@ -6,7 +6,7 @@ import ExtrasSelector from './ExtrasSelector';
 import extrasData from "../Data/dataExtras";
 import CartContext from '../Context/CartContext';
 
-const OrderDetails = ({ setShowProductDetails,product }) => {
+const ProductDetails = ({ setShowProductDetails,product }) => {
   const [animate, setAnimate] = useState(false);
   const [selectedSize, setSelectedSize] = useState(Number(product.sizesAndPrices[0].id));
   const [selectedExtras, setSelectedExtras] = useState([]);
@@ -53,6 +53,7 @@ const OrderDetails = ({ setShowProductDetails,product }) => {
     };
 
     addToCart(productToCart);
+    setShowProductDetails(false);
   }
 
   return (
@@ -98,4 +99,4 @@ const OrderDetails = ({ setShowProductDetails,product }) => {
   );
 };
 
-export default OrderDetails;
+export default ProductDetails;

@@ -1038,8 +1038,12 @@ body{
     padding: 0 10px;
     .favorite-title-container{
       display: flex;
+      .top-title{
+        align-self: center;
+      }
       .favoite-title-heart{
         margin-right: 6.5px;
+        align-self: center;
       }
     }
     .orders-title-container{
@@ -1846,11 +1850,22 @@ body{
     padding: 0 9em;
   }
   .container{
+    @include breakpoint(desktop){
+      display: flex;
+      flex-direction: row;
+      gap: 2%;
+      flex-wrap: wrap;
+    }
     display: flex;
     flex-direction: column;
     gap: 20px;
     background-color: #f5f5f5;
     .my-account{
+      @include breakpoint(desktop){
+        width: 49%;
+        height: 80px;
+        margin-bottom: 25px;
+      }
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1865,6 +1880,11 @@ body{
       }
     }
     .element{
+      @include breakpoint(desktop){
+        width: 32%;
+        gap: 0px;
+        margin-bottom: 10px;
+      }
       display: flex;
       flex-direction: column;
       background-color: #ffff;
@@ -1875,6 +1895,9 @@ body{
         padding: 16px;
       }
       .col{
+        @include breakpoint(desktop){
+          border-bottom:0px solid #fff;
+        }
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid #0000002a;

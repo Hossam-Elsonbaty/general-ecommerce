@@ -894,8 +894,12 @@ body {
 .main .top .favorite-title-container {
   display: flex;
 }
+.main .top .favorite-title-container .top-title {
+  align-self: center;
+}
 .main .top .favorite-title-container .favoite-title-heart {
   margin-right: 6.5px;
+  align-self: center;
 }
 .main .top .orders-title-container {
   display: flex;
@@ -1474,12 +1478,27 @@ body {
   gap: 20px;
   background-color: #f5f5f5;
 }
+@media (min-width: 768px) {
+  .my-profile .container {
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    flex-wrap: wrap;
+  }
+}
 .my-profile .container .my-account {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
   background-color: #fff;
+}
+@media (min-width: 768px) {
+  .my-profile .container .my-account {
+    width: 49%;
+    height: 80px;
+    margin-bottom: 25px;
+  }
 }
 .my-profile .container .my-account .col {
   display: flex;
@@ -1494,6 +1513,13 @@ body {
   background-color: white;
   gap: 8px;
 }
+@media (min-width: 768px) {
+  .my-profile .container .element {
+    width: 32%;
+    gap: 0px;
+    margin-bottom: 10px;
+  }
+}
 .my-profile .container .element h3 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1647058824);
   font-size: 22px;
@@ -1504,6 +1530,11 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1647058824);
   padding: 16px;
+}
+@media (min-width: 768px) {
+  .my-profile .container .element .col {
+    border-bottom: 0px solid #fff;
+  }
 }
 .my-profile .container .element .col:last-child {
   border-bottom: none;

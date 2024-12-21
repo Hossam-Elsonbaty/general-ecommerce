@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect, useContext } from 'react';
-import { CiHeart, CiShoppingCart, CiCirclePlus } from "react-icons/ci";
-import { MdOutlineDescription } from "react-icons/md";
+import { CiShoppingCart, CiCirclePlus } from "react-icons/ci";
 import { LuTrash2 } from "react-icons/lu";
 import { IoMdClose } from "react-icons/io";
 import { CiCircleMinus } from "react-icons/ci";
@@ -8,6 +7,7 @@ import { BsInfoCircle } from "react-icons/bs";
 import CartContext from '../Context/CartContext';
 import FormatCurrency from './FormatCurrency';
 import FavoriteIcon from './FavoriteIcon';
+import ProductDetails from './ProductDetails';
 const Product = ({ product }) => {
   const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
   const popupRef = useRef(null);
@@ -15,6 +15,13 @@ const Product = ({ product }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { cart, addToCart, increaseQuantity, decreaseQuantity, removeFromCart } = useContext(CartContext);
   const descriptionRef = useRef(null);
+  const [showProductDetails, setShowProductDetails] = useState(false);
+  const [productDetailsToBeDisplayed, setProductDetailsToBeDisplayed] = useState({});
+
+  const handleProductImgClick=(product)=>{
+    setShowProductDetails(true);
+    setProductDetailsToBeDisplayed(product);
+  }
   const toggleDescription = () => {
     setIsDescriptionVisible(prev => !prev);
   };
@@ -58,7 +65,11 @@ const Product = ({ product }) => {
     removeFromCart(product.id);
   };
   const cartItem = cart.find(item => item.id === product.id);
-  return (
+  return (<>
+    {showProductDetails
+      ?
+      <ProductDetails product={productDetailsToBeDisplayed} setShowProductDetails={setShowProductDetails}/>
+      :
     <div className='product' key={product.id}>
       <div className={`disc-popup-cont ${isOpen ? 'active' : ''}`}>
         <div ref={descriptionRef} className='disc-popup'>
@@ -102,9 +113,9 @@ const Product = ({ product }) => {
         </div>
       </div>
       <div className='col'>
-        <div className='img-container'>
+        <div className='img-container' >
           <FavoriteIcon product={product}/>
-          <img src={product.image} className='product-img' alt="product" />
+          <img src={product.image} className='product-img' alt="product" onClick={()=>handleProductImgClick(product)}/>
         </div>
         <div className='left-section'>
           <h6 className='product-name'>{product.name}</h6>
@@ -136,6 +147,7 @@ const Product = ({ product }) => {
         </div>
       </div>
     </div>
+            }</>
   );
 };
 
