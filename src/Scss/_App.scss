@@ -2199,16 +2199,38 @@ body{
   position: fixed;
   top: 0;
   left: 0;
+  overflow-y: scroll;
   .order-details-first-section{
+    @include breakpoint(desktop){
+      display: flex;
+      flex-direction: column;
+    }
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     width: 100%;
     direction: rtl;
     padding: 15px;
     background-color:#26ace6 ;
     .return-arrow-container{
+      @include breakpoint(desktop){
+        padding-right: 25px;
+        padding-top: 10px;
+      }
+      padding-right: 5px;
+      cursor: pointer;
       margin-bottom: 10px;
+      svg{
+        scale: 2 1.5;
+        @include breakpoint(desktop){
+          scale: 3 2;
+        }
+      }
     }
     .state-container{
+      @include breakpoint(desktop){
+        width:50% ;
+        align-self: center;
+        font-size: 35px;
+      }
       margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
@@ -2222,6 +2244,11 @@ body{
       }
     }
     .order-placed-container{
+      @include breakpoint(desktop){
+        width:50%;
+        align-self: center;
+        font-size: 25px;
+      }
       display: flex;
       width: 90%;
       .declare-text{
@@ -2232,17 +2259,31 @@ body{
       }
     }
     .delivery-to-info{
+      @include breakpoint(desktop){
+        width:50%;
+        align-self: center;
+        font-size: 25px;
+      }
       width: 90%;
       display: flex;
       flex-wrap: wrap;
     }
   }
   .order-details-lower-section{
+    @include breakpoint(desktop){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     width: 100%;
     direction: rtl;
     padding-right: 15px;
     padding-left: 15px;
     .product{
+      @include breakpoint(desktop){
+        width:50%;
+        height: 130px;
+      }
       width: 100%;
       height: 95px;
       display: flex;
@@ -2252,8 +2293,11 @@ body{
       border-bottom: #d7d7d7 1px solid;
       .img-name-infos{
         display: flex;
-        width: 80%;
+        width: 70%;
         .prd-img{
+          @include breakpoint(desktop){
+            width:25%;
+          }
           margin-left: 5px;
           border-radius: 10px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -2262,18 +2306,30 @@ body{
         }
         .prd-name-infos{
           .prd-name{
+            @include breakpoint(desktop){
+              font-size: 25px;
+            }
             font-weight: bold;
           }
           .prd-infos{
+            @include breakpoint(desktop){
+              font-size: 20px;
+            }
             font-weight: lighter;
           }
         }
       }
       .prd-price{
+        @include breakpoint(desktop){
+          font-size: 25px;
+        }
         font-weight: bold;
       }
     }
     .general-info{
+      @include breakpoint(desktop){
+        width: 50%;
+      }
       border-bottom: #d7d7d7 1px solid;
       padding-top: 10px;
       padding-bottom: 10px;
@@ -2281,9 +2337,15 @@ body{
       display: flex;
       justify-content: space-between;
       .title{
+        @include breakpoint(desktop){
+          font-size: 25px;
+        }
         font-weight: bold;
       }
       .value{
+        @include breakpoint(desktop){
+          font-size: 25px;
+        }
         font-weight: bold;
       }
     }
