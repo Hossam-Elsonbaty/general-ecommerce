@@ -2375,6 +2375,54 @@ body{
           }
         }
       }
+      .consistent-combos-container{
+        width: 100%;
+        .title{
+          font-size: 35px;
+          color: black;
+          padding-top: 20px;
+          padding-bottom: 15px;
+          text-align: center;
+        }
+        .consistent-combos-list{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          padding-left: 10px;
+          padding-right: 10px;
+          .consistent-combo{
+            width: 100%;
+            display: flex;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            padding: 30px;
+            background-color: #f7f7f7;
+            img{
+              border-radius: 8px;
+              width: 60px;
+              height: 60px;
+              margin-left: 15px;
+            }
+            .name-description-consistent-combo{
+
+              span{
+                font-size: 20px;
+                color: black;
+                font-weight: bold;
+              }
+              p{
+                font-size: 17px;
+                color: black;
+                font-weight: lighter;
+              }
+            }
+          }
+          .consistent-combo-choosed{
+            border: 1px solid #26ace6;
+            background-color: rgb(162, 216, 239);
+          }
+        }
+      }
       .product-extras-container{
         display: flex;
         flex-direction: column;

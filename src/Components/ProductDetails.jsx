@@ -4,11 +4,14 @@ import SizeSelector from './SizeSelector';
 import AddToCartContainer from './AddCartContainer';
 import ExtrasSelector from './ExtrasSelector';
 import extrasData from "../Data/dataExtras";
+import ConsistentCombosData from '../Data/dataConsistentCombos';
 import CartContext from '../Context/CartContext';
+import ConsistentCombosSelector from './ConsistentCombosSelector';
 
 const ProductDetails = ({ setShowProductDetails,product }) => {
   const [animate, setAnimate] = useState(false);
   const [selectedSize, setSelectedSize] = useState(Number(product.sizesAndPrices[0].id));
+  const [selectedCombo, setSelectedCombo] = useState(Number(ConsistentCombosData[0].id));
   const [selectedExtras, setSelectedExtras] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const { addToCart } = useContext(CartContext);
@@ -21,12 +24,13 @@ const ProductDetails = ({ setShowProductDetails,product }) => {
   useEffect(() => {
     // this code to update total price depending on selectedSize, selectedExtras for every change in selectedSize or selectedExtras
     const sizePrice = selectedSize ? product.sizesAndPrices.find(size => size.id === selectedSize)?.price : 0;
+    const comboPrice = selectedCombo ? ConsistentCombosData.find(combo => combo.id === selectedCombo)?.price : 0;
     const extrasPrice = selectedExtras.reduce((total, extraId) => {
       const extra = extrasData.find(extra => extra.id === extraId);
       return total + (extra ? extra.price : 0);
     }, 0);
-    setTotalPrice(sizePrice + extrasPrice);
-  }, [selectedSize, selectedExtras]);
+    setTotalPrice(sizePrice + extrasPrice+comboPrice);
+  }, [selectedSize, selectedExtras,selectedCombo]);
 
   const handleClose = () => {
     // Remove the animation class before unmounting
@@ -38,7 +42,9 @@ const ProductDetails = ({ setShowProductDetails,product }) => {
     const sizeObject = product.sizesAndPrices.find(
       (size) => size.id === selectedSize
     ); // Find the selected size object
-    console.log("seleextras",selectedExtras)
+    const comboObject = ConsistentCombosData.find(
+      (combo) => combo.id === selectedCombo
+    ); // Find the selected combo object
     const extrasObjects = selectedExtras.map((extraId) => 
       extrasData.find((extra) => extra.id === extraId)
     ); // Map selectedExtras IDs to their respective objects
@@ -48,10 +54,10 @@ const ProductDetails = ({ setShowProductDetails,product }) => {
       name: product.name,
       image:product.image,
       size: sizeObject, // Assign the full size object
+      combo: comboObject, // Assign the full combo object
       extras: extrasObjects, // Assign the list of full extras objects
       price: totalPrice, // Use the computed total price
     };
-
     addToCart(productToCart);
     setShowProductDetails(false);
   }
@@ -80,6 +86,11 @@ const ProductDetails = ({ setShowProductDetails,product }) => {
                 sizesAndPrices={product.sizesAndPrices}  
                 selectedSize={selectedSize}
                 setSelectedSize={setSelectedSize} 
+              />
+              <ConsistentCombosSelector 
+                consistentCombos={ConsistentCombosData}  
+                selectedCombo={selectedCombo}
+                setSelectedCombo={setSelectedCombo} 
               />
               <ExtrasSelector
                 extrasData={extrasData}
