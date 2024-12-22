@@ -2305,36 +2305,70 @@ body{
     height: 80vh;
     overflow-y: scroll;
     .product-details-first-section{
+      @include breakpoint(desktop){
+        padding-bottom: 40px;
+      }
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
       width: 100%;
       direction: rtl;
       padding: 10px;
       background-color:#26ace6 ;
       .return-arrow-container{
+        @include breakpoint(desktop){
+          padding-right: 25px;
+          padding-top: 10px;
+        }
+        padding-right: 5px;
+        cursor: pointer;
         margin-bottom: 10px;
+        svg{
+          scale: 2 1.5;
+          @include breakpoint(desktop){
+            scale: 3 2;
+          }
+        }
       }
       .product-infos-container{
+        @include breakpoint(desktop){
+          flex-direction: row;
+          padding-right: 30%;
+          padding-left: 30%;
+        }
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         img{
+          @include breakpoint(desktop){
+            width: 25%;
+            margin-bottom: 0px;
+            margin-left: 7%;
+          }
           width: 70%;
           height: 150px;
           margin-bottom: 20px;
         }
-        span{
-          font-weight: bold;
-          font-size: 35px;
-          max-width: 75%;
-          flex-wrap: wrap;
-          margin-bottom: 8px;
-        }
-        p{
-          font-weight: normal;
-          font-size: 20px;
-          max-width: 90%;
-          flex-wrap: wrap;
+        .name-description{
+          @include breakpoint(desktop){
+            align-items: start;
+          }
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          span{
+            font-weight: bold;
+            font-size: 35px;
+            max-width: 75%;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+          }
+          p{
+            font-weight: normal;
+            font-size: 22px;
+            max-width: 90%;
+            flex-wrap: wrap;
+          }
         }
       }
     }
@@ -2353,16 +2387,25 @@ body{
           text-align: center;
         }
         .sizes-prices-list{
+          @include breakpoint(desktop){
+            flex-direction: row;
+          }
           direction: ltr;
           display: flex;
           flex-direction: column;
           max-width: fit-content;
           label{
+            @include breakpoint(desktop){
+              margin-bottom: 40px;
+              margin-right: 4%;
+              min-width: fit-content;
+            }
+            cursor: pointer;
             margin-bottom: 10px;
             font-size: 28px;
             max-width: fit-content;
             input{
-            
+              cursor: pointer;
               margin-right: 10px;
               transform: scale(1.7);
             }
@@ -2376,6 +2419,11 @@ body{
         }
       }
       .consistent-combos-container{
+        @include breakpoint(desktop){
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
         width: 100%;
         .title{
           font-size: 35px;
@@ -2385,12 +2433,23 @@ body{
           text-align: center;
         }
         .consistent-combos-list{
+          @include breakpoint(desktop){
+            width: 70%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
           width: 100%;
           display: flex;
           flex-direction: column;
           padding-left: 10px;
           padding-right: 10px;
           .consistent-combo{
+            @include breakpoint(desktop){
+              width: 45%;
+              margin-bottom: 30px;
+              cursor: pointer;
+            }
             width: 100%;
             display: flex;
             margin-bottom: 15px;
@@ -2404,7 +2463,6 @@ body{
               margin-left: 15px;
             }
             .name-description-consistent-combo{
-
               span{
                 font-size: 20px;
                 color: black;
@@ -2424,6 +2482,11 @@ body{
         }
       }
       .product-extras-container{
+        @include breakpoint(desktop){
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2435,6 +2498,12 @@ body{
           text-align: center;
         }
         .extras-list{
+          @include breakpoint(desktop){
+            width: 50%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -2445,6 +2514,11 @@ body{
           padding-right:10px ;
           padding-left:10px ;
           label{
+            @include breakpoint(desktop){
+              width: 47%;
+              margin-bottom: 30px;
+              cursor: pointer;
+            }
             min-height: 60px;
             border-radius: 9px;
             padding-right: 15px;
@@ -2457,6 +2531,7 @@ body{
             margin-bottom:20px ;
             display: flex;
             input{
+              cursor: pointer;
               margin-left: 10px;
               transform: scale(1.7);
             }
@@ -2498,6 +2573,10 @@ body{
       margin-bottom: 7px;
     }
     .addtocart-button{
+      @include breakpoint(desktop){
+        width: 22%;
+      }
+      cursor: pointer;
       border-radius: 12px;
       font-size: 25px;
       padding-top: 7px;

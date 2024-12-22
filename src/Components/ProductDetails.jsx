@@ -73,12 +73,14 @@ const ProductDetails = ({ setShowProductDetails,product }) => {
               </div>
               <div className="product-infos-container">
                 <img src={product.image} alt="" />
-                <span className='product-name'>
-                  برجر بالمشروم
-                </span>
-                <p className='product-description'>
-                  برجر بالمشروم برجر بالمشروم برجر بالمشروم برجر بالمشروم برجر بالمشروم برجر بالامشروم بارةبكم بالرحجرببشلملاومش 
-                </p>
+                <div className='name-description'>
+                  <span className='product-name'>
+                    برجر بالمشروم
+                  </span>
+                  <p className='product-description'>
+                    برجر بالمشروم برجر بالمشروم برجر بالمشروم برجر بالمشروم برجر بالمشروم برجر بالامشروم بارةبكم بالرحجرببشلملاومش 
+                  </p>
+                </div>
               </div>
             </div>
             <div className="product-choices-container">
