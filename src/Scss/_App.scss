@@ -1988,6 +1988,12 @@ body{
   z-index: 8; 
 }
 .filters-container{
+  @include breakpoint(desktop){
+    width: 35%;
+    max-height: 100vh;
+    height: 100vh;
+    top: 0;
+  }
   border-radius: 15px;
   overflow-y:auto;
   overflow-x: hidden;
@@ -1995,6 +2001,7 @@ body{
   background-color: white;
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
   max-height: 50vh;
   .filters-elevated-span{
@@ -2003,7 +2010,7 @@ body{
     top: 0;
     position: sticky;
     display: flex;
-    direction: ltr;
+    direction: rtl;
     padding-top: 5px;
     padding-bottom: 5px ;
     padding-right: 10px ;
@@ -2027,7 +2034,7 @@ body{
       }
     }
     .close-filters{
-      margin-right: 10px;
+      margin-left: 10px;
       width: fit-content;
       background-color: #e60023; /* Bright red color */
       color: #ffffff; /* White text */
@@ -2057,6 +2064,9 @@ body{
         justify-content: space-between;
         font-size: 20px;
         border-top: #d7d7d7 1px solid;
+        .filter-open-close-container{
+          cursor: pointer;
+        }
       }
       .the-filters{
         flex-wrap: wrap;
@@ -2073,6 +2083,7 @@ body{
           padding-left: 10px ;
           background-color: #e9e9e9;
           border-radius: 12px;
+          cursor: pointer;
         }
         .filter-choosed{
           margin-bottom: 8px ;
@@ -2085,6 +2096,7 @@ body{
           color: white;
           border-radius: 12px;
           border: 1px solid #147eab;
+          cursor: pointer;
         }
       }
       .price-filter{
@@ -2099,6 +2111,7 @@ body{
         }
         .price-bar{
           display: flex;
+          cursor: pointer;
           .slider {
             -webkit-appearance: none;
             width: 100%;
@@ -2108,6 +2121,7 @@ body{
             outline: none;
             opacity: 0.7;
             transition: opacity 0.2s;
+            cursor: pointer;
           }
           
           .slider::-webkit-slider-thumb {
