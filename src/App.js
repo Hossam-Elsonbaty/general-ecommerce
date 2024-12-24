@@ -65,6 +65,7 @@ import { FiltersProvider } from './Context/IsFiltersOpened.js';
 import { ProductsProvider } from './Context/ProductsContext.js';
 import SearchResults from './Pages/SearchResults.jsx';
 import UserAddresses from './Pages/UserAddresses.jsx';
+import TemporaryComboDetails from './Pages/TemporaryComboDetails.jsx';
 const App = () => {
   const location = useLocation();
   // https://wa.me/201118066382
@@ -94,6 +95,7 @@ const App = () => {
         <Route path='my-favorite' exact element={<Favorite />} />
         <Route path='search-results' exact element={<SearchResults />} />
         <Route path='orders' exact element={<Orders />} />
+        <Route path='offer-details' exact element={<TemporaryComboDetails />} />
       </Routes>
       {location.pathname !== '/sign-up' && location.pathname !== '/login' && <FixedFooter />}
     </>
