@@ -2455,7 +2455,7 @@ body {
 }
 @media (min-width: 768px) {
   .temporary-combo-details-container main .temporary-combo-details-first-section {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 }
 .temporary-combo-details-container main .temporary-combo-details-first-section .return-arrow-container {
@@ -2482,6 +2482,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .temporary-combo-details-container main .temporary-combo-details-first-section .temporary-combo-infos-container {
@@ -2529,22 +2530,44 @@ body {
 }
 .temporary-combo-details-container main .temporary-combo-details-first-section .combo-parts {
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: flex-start;
+  width: -moz-fit-content;
+  width: fit-content;
   overflow-x: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  scrollbar-width: thin;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .temporary-combo-details-container main .temporary-combo-details-first-section .combo-parts {
+    justify-content: center;
+  }
 }
 .temporary-combo-details-container main .temporary-combo-details-first-section .combo-parts .combo-part {
   font-weight: bold;
   font-size: 22px;
-  padding: 15px;
+  padding: 15px 20px;
   color: white;
   border-radius: 9px;
   cursor: pointer;
 }
+.temporary-combo-details-container main .temporary-combo-details-first-section .combo-parts .combo-part:hover {
+  background-color: #004f8f; /* Example hover color */
+  transition: background-color 0.3s ease;
+}
 .temporary-combo-details-container main .temporary-combo-details-first-section .combo-parts .combo-part-choosed {
-  background-color: #000000;
+  background-color: #004f8f;
+  color: #fff;
+  border: 1px solid #000; /* Highlight selected tab */
+}
+.temporary-combo-details-container main .temporary-combo-details-first-section .combo-parts .combo-parts::-webkit-scrollbar {
+  height: 6px; /* Adjust scrollbar height */
+}
+.temporary-combo-details-container main .temporary-combo-details-first-section .combo-parts .combo-parts::-webkit-scrollbar-thumb {
+  background-color: #aaa; /* Thumb color */
+  border-radius: 4px; /* Rounded scrollbar */
+}
+.temporary-combo-details-container main .temporary-combo-details-first-section .combo-parts .combo-parts::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Track color */
 }
 .temporary-combo-details-container main .temporary-combo-choices-container {
   padding-left: 20px;

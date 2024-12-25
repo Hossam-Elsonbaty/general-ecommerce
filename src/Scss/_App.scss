@@ -2758,7 +2758,7 @@ body{
     overflow-y: scroll;
     .temporary-combo-details-first-section{
       @include breakpoint(desktop){
-        padding-bottom: 20px;
+        padding-bottom: 10px;
       }
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
       width: 100%;
@@ -2791,6 +2791,7 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 20px;
         img{
           @include breakpoint(desktop){
             width: 25%;
@@ -2826,22 +2827,43 @@ body{
         }
       }
       .combo-parts{
+        @include breakpoint(desktop){
+          justify-content: center;
+        }
         display: flex;
-        justify-content: center;
-        width: 100%;
+        justify-content: flex-start;
+        width: fit-content;
         overflow-x: auto;
-        padding-left: 10px;
-        padding-right: 10px;
+        scrollbar-width: thin;
+        width: 100%;
         .combo-part{
           font-weight: bold;
           font-size: 22px;
-          padding: 15px;
+          padding: 15px 20px;
           color: white;
           border-radius: 9px;
           cursor: pointer;
         }
-        .combo-part-choosed{
-          background-color: #000000;
+        .combo-part:hover {
+          background-color: #004f8f; /* Example hover color */
+          transition: background-color 0.3s ease;
+        }
+        .combo-part-choosed {
+          background-color:#004f8f;
+          color: #fff;
+          border: 1px solid #000; /* Highlight selected tab */
+        }
+        .combo-parts::-webkit-scrollbar {
+          height: 6px; /* Adjust scrollbar height */
+        }
+        
+        .combo-parts::-webkit-scrollbar-thumb {
+          background-color: #aaa; /* Thumb color */
+          border-radius: 4px; /* Rounded scrollbar */
+        }
+        
+        .combo-parts::-webkit-scrollbar-track {
+          background-color: #f0f0f0; /* Track color */
         }
       }
     }
