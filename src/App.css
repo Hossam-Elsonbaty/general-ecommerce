@@ -1554,6 +1554,12 @@ body {
   gap: 2em;
   overflow-y: hidden;
 }
+@media (min-width: 768px) {
+  .sign-up {
+    flex-direction: row;
+    height: 100vh;
+  }
+}
 .sign-up .svg-container {
   background-color: #e3eaf2;
   border-bottom-left-radius: 60px;
@@ -1563,14 +1569,35 @@ body {
   align-items: center;
   height: 17em;
 }
+@media (min-width: 768px) {
+  .sign-up .svg-container {
+    flex-direction: row;
+    height: 100%;
+    border-radius: 0px;
+  }
+}
 .sign-up .svg-container .svg {
   width: 17em;
+}
+@media (min-width: 768px) {
+  .sign-up .svg-container .svg {
+    width: 35em;
+  }
 }
 .sign-up .form-section {
   display: flex;
   flex-direction: column;
   gap: 1em;
   padding: 0 25px;
+}
+@media (min-width: 768px) {
+  .sign-up .form-section {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 6rem;
+    gap: 4em;
+  }
 }
 .sign-up .form-section h1 {
   font-size: 30px;
@@ -1582,12 +1609,25 @@ body {
   height: 100%;
   gap: 1em;
 }
+@media (min-width: 768px) {
+  .sign-up .form-section .fields-container {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+}
 .sign-up .form-section .fields-container input {
   font-size: 16px;
   outline: none;
   border: 2px solid rgba(231, 231, 231, 0.5019607843);
   padding: 8px 16px;
   border-radius: 12px;
+}
+@media (min-width: 768px) {
+  .sign-up .form-section .fields-container input {
+    font-size: 22px;
+    padding: 14px 22px;
+  }
 }
 .sign-up .form-section .fields-container button {
   font-size: 16px;
@@ -1597,6 +1637,13 @@ body {
   padding: 8px 16px;
   border-radius: 12px;
   color: white;
+}
+@media (min-width: 768px) {
+  .sign-up .form-section .fields-container button {
+    min-width: 8em;
+    align-self: center;
+    font-size: 22px;
+  }
 }
 
 .ant-steps-item-icon {

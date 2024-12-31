@@ -1925,6 +1925,10 @@ body{
   flex-direction: column;
   gap: 2em;
   overflow-y: hidden;
+  @include breakpoint(desktop){
+    flex-direction: row;
+    height: 100vh;
+  }
   .svg-container{
     background-color: #e3eaf2;
     border-bottom-left-radius:60px ;
@@ -1933,7 +1937,15 @@ body{
     justify-content: center;
     align-items: center;
     height: 17em;
+    @include breakpoint(desktop){
+      flex-direction: row;
+      height: 100%;
+      border-radius:0px ;
+    }  
     .svg{
+      @include breakpoint(desktop){
+        width: 35em;
+      }
       width:17em;
     }
   }
@@ -1942,6 +1954,13 @@ body{
     flex-direction: column;
     gap: 1em;
     padding: 0 25px;
+    @include breakpoint(desktop){
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0 6rem;
+      gap: 4em;
+    }
     h1 {
       font-size: 30px;
       color: #1e5f94;
@@ -1951,12 +1970,20 @@ body{
       flex-direction: column;
       height: 100%;
       gap: 1em;
+      @include breakpoint(desktop){
+        height: fit-content;
+        width: 100%;
+      }  
       input {
         font-size: 16px;
         outline: none;
         border: 2px solid #e7e7e780;
         padding: 8px 16px;
         border-radius: 12px;
+        @include breakpoint(desktop){
+          font-size: 22px;
+          padding: 14px 22px;
+        }    
       }
       button {
         font-size: 16px;
@@ -1966,6 +1993,11 @@ body{
         padding: 8px 16px;
         border-radius: 12px;
         color: #ffff;
+        @include breakpoint(desktop){
+          min-width: 8em;
+          align-self: center;
+          font-size: 22px;
+        }    
       }
     }
   }
